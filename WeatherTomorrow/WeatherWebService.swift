@@ -10,6 +10,8 @@ import Alamofire
 
 protocol WeatherWebService {
     
+    func fetchCityData(city: String, onResponse: @escaping (NetworkState, CityResponse?) -> Void)
+    
     func fetchTomorrowWeatherForCity(city: String, onResponse: @escaping (NetworkState, Weather?) -> Void)
     
 }
@@ -18,7 +20,7 @@ class WeatherWebServiceImpl: WeatherWebService {
     let cityUrl = "https://www.metaweather.com/api/location/search/?query="
     let weatherUrl = "https://www.metaweather.com/api/location/"
    
-    private func fetchCityData(city: String, onResponse: @escaping (NetworkState, CityResponse?) -> Void) {
+    func fetchCityData(city: String, onResponse: @escaping (NetworkState, CityResponse?) -> Void) {
         let url = cityUrl + city.addingPercentEncoding(withAllowedCharacters: .alphanumerics)!
         AF.request(url, method: .get).responseData {response in
             debug {
@@ -26,8 +28,11 @@ class WeatherWebServiceImpl: WeatherWebService {
             }
             if response.error == nil {
                 let (state, result) = unmarshal(from: response, type: [CityResponse].self)
-                
-                onResponse(state, result![0])
+                if(result!.isEmpty) {
+                    onResponse(.network("No data for this city"), nil)
+                } else {
+                    onResponse(state, result![0])
+                }
             } else {
                 onResponse(.failed("Unknown error occurred"), nil)
             }
@@ -68,7 +73,7 @@ class WeatherWebServiceImpl: WeatherWebService {
     }
 }
 
-enum NetworkState {
+enum NetworkState: Equatable {
     case failed(String)
     case network(String)
     case ok

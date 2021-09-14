@@ -21,6 +21,8 @@
 		C63E68FE26F081DE0000245D /* WeatherRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63E68FD26F081DD0000245D /* WeatherRepository.swift */; };
 		C63E691026F094CE0000245D /* WeatherWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63E690F26F094CE0000245D /* WeatherWebService.swift */; };
 		C63E691E26F0A6010000245D /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63E691D26F0A6010000245D /* WeatherViewModel.swift */; };
+		C67D1E9226F0C9CF00E58E58 /* MockWeatherWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67D1E8D26F0C84100E58E58 /* MockWeatherWebService.swift */; };
+		C67D1E9A26F0D0DE00E58E58 /* WeatherReposotoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67D1E9926F0D0DE00E58E58 /* WeatherReposotoryTests.swift */; };
 		EC974E4700783076595EF292 /* Pods_WeatherTomorrow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B7726911C7AD880206C432 /* Pods_WeatherTomorrow.framework */; };
 		EDA2FB86E8A64BF973A570CC /* Pods_WeatherTomorrow_WeatherTomorrowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D26B8721450B68627398CA6 /* Pods_WeatherTomorrow_WeatherTomorrowUITests.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +70,8 @@
 		C63E68FD26F081DD0000245D /* WeatherRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepository.swift; sourceTree = "<group>"; };
 		C63E690F26F094CE0000245D /* WeatherWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWebService.swift; sourceTree = "<group>"; };
 		C63E691D26F0A6010000245D /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		C67D1E8D26F0C84100E58E58 /* MockWeatherWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWeatherWebService.swift; sourceTree = "<group>"; };
+		C67D1E9926F0D0DE00E58E58 /* WeatherReposotoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherReposotoryTests.swift; sourceTree = "<group>"; };
 		E9D6099F3FA035EB300E3F38 /* Pods-WeatherTomorrow-WeatherTomorrowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherTomorrow-WeatherTomorrowUITests.debug.xcconfig"; path = "Target Support Files/Pods-WeatherTomorrow-WeatherTomorrowUITests/Pods-WeatherTomorrow-WeatherTomorrowUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E9D7115746170C3D1D7FC266 /* Pods-WeatherTomorrowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherTomorrowTests.release.xcconfig"; path = "Target Support Files/Pods-WeatherTomorrowTests/Pods-WeatherTomorrowTests.release.xcconfig"; sourceTree = "<group>"; };
 		FAD03D8748E096C76FDCBF92 /* Pods-WeatherTomorrow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherTomorrow.debug.xcconfig"; path = "Target Support Files/Pods-WeatherTomorrow/Pods-WeatherTomorrow.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,8 +180,10 @@
 		C63E68CC26EFD8C90000245D /* WeatherTomorrowTests */ = {
 			isa = PBXGroup;
 			children = (
+				C67D1E8D26F0C84100E58E58 /* MockWeatherWebService.swift */,
 				C63E68CD26EFD8C90000245D /* WeatherTomorrowTests.swift */,
 				C63E68CF26EFD8C90000245D /* Info.plist */,
+				C67D1E9926F0D0DE00E58E58 /* WeatherReposotoryTests.swift */,
 			);
 			path = WeatherTomorrowTests;
 			sourceTree = "<group>";
@@ -444,7 +450,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C67D1E9A26F0D0DE00E58E58 /* WeatherReposotoryTests.swift in Sources */,
 				C63E68CE26EFD8C90000245D /* WeatherTomorrowTests.swift in Sources */,
+				C67D1E9226F0C9CF00E58E58 /* MockWeatherWebService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
